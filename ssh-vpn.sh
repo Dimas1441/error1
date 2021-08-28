@@ -40,7 +40,7 @@ WantedBy=multi-user.target
 END
 
 # nano /etc/bin/wstunnel
-#cat > /etc/bin/wstunnel <<-END
+cat > /etc/bin/wstunnel <<-END
 #!/bin/sh -e
 # wstunnel
 # By default this script does nothing
@@ -193,7 +193,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Dimas1441/error1/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Dimas1441/error1/main/vpn.sh && dos2unix vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -234,7 +234,7 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/Dimas1441/error1/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Dimas1441/error1/main/bbr.sh && dos2unix bbr.sh && chmod +x bbr.sh && ./bbr.sh
 wget https://raw.githubusercontent.com/Dimas1441/error1/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # blockir torrent
@@ -262,103 +262,44 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Dimas1441/error1/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Dimas1441/error1/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Dimas1441/error1/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Dimas1441/error1/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Dimas1441/error1/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Dimas1441/error1/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Dimas1441/error1/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Dimas1441/error1/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Dimas1441/error1/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Dimas1441/error1/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Dimas1441/error1/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Dimas1441/error1/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Dimas1441/error1/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Dimas1441/error1/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Dimas1441/error1/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Dimas1441/error1/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Dimas1441/error1/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Dimas1441/error1/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Dimas1441/error1/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Dimas1441/error1/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Dimas1441/error1/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Dimas1441/error1/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Dimas1441/error1/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Dimas1441/error1/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Dimas1441/error1/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Dimas1441/error1/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Dimas1441/error1/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Dimas1441/error1/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Dimas1441/error1/main/xp.sh"
-wget -O update "https://raw.githubusercontent.com/Dimas1441/error1/main/update.sh"
-wget -O bbr "https://raw.githubusercontent.com/Dimas1441/error1/main/bbr.sh"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Dimas1441/error1/main/user-limit.sh && chmod +x /usr/bin/user-limit
-wget -O cfd "https://raw.githubusercontent.com/Dimas1441/error1/main/cfd.sh"
-wget -O cff "https://raw.githubusercontent.com/Dimas1441/error1/main/cff.sh"
-wget -O cfh "https://raw.githubusercontent.com/Dimas1441/error1/main/cfh.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/Dimas1441/error1/main/autoreboot.sh"
-wget -O bannerku "https://raw.githubusercontent.com/Dimas1441/error1/main/bannerku"
-wget -O v2raay "https://raw.githubusercontent.com/Dimas1441/error1/main/update/v2raay.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/Dimas1441/error1/main/update/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/Dimas1441/error1/main/update/xp-trgo.sh"
-wget -O l2tp "https://raw.githubusercontent.com/Dimas1441/error1/main/update/l2tp.sh"
-wget -O ssh "https://raw.githubusercontent.com/Dimas1441/error1/main/update/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/Dimas1441/error1/main/update/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/Dimas1441/error1/main/update/sstpp.sh"
-wget -O trojaan "https://raw.githubusercontent.com/Dimas1441/error1/main/update/trojaan.sh"
-wget -O vleess "https://raw.githubusercontent.com/Dimas1441/error1/main/update/vleess.sh"
-wget -O wgr "https://raw.githubusercontent.com/Dimas1441/error1/main/update/wgr.sh"
-wget -O running "https://raw.githubusercontent.com/Dimas1441/error1/main/running.sh"
-wget -O menu "https://raw.githubusercontent.com/Dimas1441/error1/main/update/menu.sh"
-
-chmod +x add-host
-chmod +x about
-chmod +x menu
-chmod +x usernew
-chmod +x trial
-chmod +x hapus
-chmod +x member
-chmod +x delete
-chmod +x cek
-chmod +x restart
-chmod +x speedtest
-chmod +x info
-chmod +x about
-chmod +x autokill
-chmod +x tendang
-chmod +x ceklim
-chmod +x ram
-chmod +x renew
-chmod +x clear-log
-chmod +x change-port
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-sstp
-chmod +x port-tr
-chmod +x port-squid
-chmod +x port-ws
-chmod +x port-vless
-chmod +x wbmn
-chmod +x xp
-chmod +x bannerku
-chmod +x bbr
-chmod +x cfd
-chmod +x cff
-chmod +x cfh
-chmod +x autoreboot
-chmod +x v2raay
-chmod +x trojaan
-chmod +x sstpp
-chmod +x vleess
-chmod +x wgr
-chmod +x ssssr
-chmod +x ssh
-chmod +x l2tp
-chmod +x add-trgo
-chmod +x xp-trgo
-chmod +x running
+wget -O /usr/bin/add-host https://raw.githubusercontent.com/Dimas1441/error1/main/add-host.sh && dos2unix /usr/bin/add-host && chmod +x /usr/bin/add-host
+wget -O /usr/bin/about https://raw.githubusercontent.com/Dimas1441/error1/main/about.sh && dos2unix /usr/bin/about && chmod +x /usr/bin/about
+wget -O /usr/bin/menuu https://raw.githubusercontent.com/Dimas1441/error1/main/menuu.sh && dos2unix /usr/bin/menuu && chmod +x /usr/bin/menuu
+wget -O /usr/bin/usernew https://raw.githubusercontent.com/Dimas1441/error1/main/usernew.sh && dos2unix /usr/bin/usernew && chmod +x /usr/bin/usernew
+wget -O /usr/bin/trial https://raw.githubusercontent.com/Dimas1441/error1/main/trial.sh && dos2unix /usr/bin/trial && chmod +x /usr/bin/trial
+wget -O /usr/bin/hapus https://raw.githubusercontent.com/Dimas1441/error1/main/hapus.sh && dos2unix /usr/bin/hapus && chmod +x /usr/bin/hapus
+wget -O /usr/bin/member https://raw.githubusercontent.com/Dimas1441/error1/main/member.sh && dos2unix /usr/bin/member && chmod +x /usr/bin/member
+wget -O /usr/bin/delete https://raw.githubusercontent.com/Dimas1441/error1/main/delete.sh && dos2unix /usr/bin/delete && chmod +x /usr/bin/delete
+wget -O /usr/bin/cek https://raw.githubusercontent.com/Dimas1441/error1/main/cek.sh && dos2unix /usr/bin/cek && chmod +x /usr/bin/cek
+wget -O /usr/bin/restart https://raw.githubusercontent.com/Dimas1441/error1/main/restart.sh && dos2unix /usr/bin/restart && chmod +x /usr/bin/restart
+wget -O /usr/bin/speedtest https://raw.githubusercontent.com/Dimas1441/error1/main/speedtest_cli.py && dos2unix /usr/bin/speedtest && chmod +x /usr/bin/speedtest
+wget -O /usr/bin/info https://raw.githubusercontent.com/Dimas1441/error1/main/info.sh && dos2unix /usr/bin/info && chmod +x /usr/bin/info
+wget -O /usr/bin/ram https://raw.githubusercontent.com/Dimas1441/error1/main/ram.sh && dos2unix /usr/bin/ram && chmod +x /usr/bin/ram
+wget -O /usr/bin/renew https://raw.githubusercontent.com/Dimas1441/error1/main/renew.sh && dos2unix /usr/bin/renew && chmod +x /usr/bin/renew
+wget -O /usr/bin/autokill https://raw.githubusercontent.com/Dimas1441/error1/main/autokill.sh && dos2unix /usr/bin/autokill && chmod +x /usr/bin/autokill
+wget -O /usr/bin/ceklim https://raw.githubusercontent.com/Dimas1441/error1/main/ceklim.sh && dos2unix /usr/bin/ceklim && chmod +x /usr/bin/ceklim
+wget -O /usr/bin/tendang https://raw.githubusercontent.com/Dimas1441/error1/main/tendang.sh && dos2unix /usr/bin/tendang && chmod +x /usr/bin/tendang
+wget -O /usr/bin/clear-log https://raw.githubusercontent.com/Dimas1441/error1/main/clear-log.sh && dos2unix /usr/bin/clear-log && chmod +x /usr/bin/clear-log
+wget -O /usr/bin/change-port https://raw.githubusercontent.com/Dimas1441/error1/main/change.sh && dos2unix /usr/bin/change && chmod +x /usr/bin/change
+wget -O /usr/bin/port-ovpn https://raw.githubusercontent.com/Dimas1441/error1/main/port-ovpn.sh && dos2unix /usr/bin/port-ovpn && chmod +x /usr/bin/port-ovpn
+wget -O /usr/bin/port-ssl https://raw.githubusercontent.com/Dimas1441/error1/main/port-ssl.sh && dos2unix /usr/bin/port-ssl && chmod +x /usr/bin/port-ssl
+wget -O /usr/bin/port-wg https://raw.githubusercontent.com/Dimas1441/error1/main/port-wg.sh && dos2unix /usr/bin/port-wg && chmod +x /usr/bin/port-wg
+wget -O /usr/bin/port-tr https://raw.githubusercontent.com/Dimas1441/error1/main/port-tr.sh && dos2unix /usr/bin/port-tr && chmod +x /usr/bin/port-tr
+wget -O /usr/bin/port-sstp https://raw.githubusercontent.com/Dimas1441/error1/main/port-sstp.sh && dos2unix /usr/bin/port-sstp && chmod +x /usr/bin/port-sstp
+wget -O /usr/bin/port-squid https://raw.githubusercontent.com/Dimas1441/error1/main/port-squid.sh && dos2unix /usr/bin/port-squid && chmod +x /usr/bin/port-squid
+wget -O /usr/bin/port-ws https://raw.githubusercontent.com/Dimas1441/error1/main/port-ws.sh && dos2unix /usr/bin/port-ws && chmod +x /usr/bin/port-ws
+wget -O /usr/bin/port-vless https://raw.githubusercontent.com/Dimas1441/error1/main/port-vless.sh && dos2unix /usr/bin/port-vless && chmod +x /usr/bin/port-vless
+wget -O /usr/bin/wbmn https://raw.githubusercontent.com/Dimas1441/error1/main/webmin.sh && dos2unix /usr/bin/wbmn && chmod +x /usr/bin/wbmn
+wget -O /usr/bin/xp https://raw.githubusercontent.com/Dimas1441/error1/main/xp.sh && dos2unix /usr/bin/xp && chmod +x /usr/bin/xp
+wget -O /usr/bin/update https://raw.githubusercontent.com/Dimas1441/error1/main/update.sh && dos2unix /usr/bin/update && chmod +x /usr/bin/update
+wget -O /usr/bin/bbr https://raw.githubusercontent.com/Dimas1441/error1/main/bbr.sh && dos2unix /usr/bin/bbr && chmod +x /usr/bin/bbr
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Dimas1441/error1/main/user-limit.sh && dos2unix /usr/bin/user-limit && chmod +x /usr/bin/user-limit
+wget -O /usr/bin/cfd https://raw.githubusercontent.com/Dimas1441/error1/main/cfd.sh && dos2unix /usr/bin/cfd && chmod +x /usr/bin/cfd
+wget -O /usr/bin/cff https://raw.githubusercontent.com/Dimas1441/error1/main/cff.sh && dos2unix /usr/bin/cff && chmod +x /usr/bin/cff
+wget -O /usr/bin/cfh https://raw.githubusercontent.com/Dimas1441/error1/main/cfh.sh && dos2unix /usr/bin/cfh && chmod +x /usr/bin/cfg
+wget -O /usr/bin/ autoreboot https://raw.githubusercontent.com/Dimas1441/error1/main/autoreboot.sh && dos2unix /usr/bin/autoreboot && chmod +x /usr/bin/
+wget -O /usr/bin/bannerku https://raw.githubusercontent.com/Dimas1441/error1/main/bannerku && dos2unix /usr/bin/bannerku && chmod +x /usr/bin/bannerku
+wget -O /usr/bin/running https://raw.githubusercontent.com/Dimas1441/error1/main/running.sh && dos2unix /usr/bin/running && chmod +x /usr/bin/running
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
