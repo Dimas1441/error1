@@ -11,8 +11,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-rm -f setup.sh
-fi
+clear
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
@@ -36,8 +35,9 @@ wget https://raw.githubusercontent.com/Dimas1441/error1/main/ipsec.sh && dos2uni
 wget https://raw.githubusercontent.com/Dimas1441/error1/main/set-br.sh && dos2unix set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install trojan-go
 wget https://raw.githubusercontent.com/Dimas1441/error1/main/update/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh
-
+rm -f /root/cf.sh
 rm -f /root/ssh-vpn.sh
+rm -f /root/websock.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
 rm -f /root/ss.sh

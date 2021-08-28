@@ -34,6 +34,7 @@ wget -O del-trgo "https://raw.githubusercontent.com/Dimas1441/error1/main/update
 wget -O renew-trgo "https://raw.githubusercontent.com/Dimas1441/error1/main/update/renew-trgo.sh"
 wget -O cek-trgo "https://raw.githubusercontent.com/Dimas1441/error1/main/update/cek-trgo.sh"
 wget -O trojanGO "https://raw.githubusercontent.com/Dimas1441/error1/main/update/trojanGO.sh"
+
 chmod +x v2raay
 chmod +x bbr
 chmod +x l2tp
